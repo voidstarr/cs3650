@@ -1,6 +1,3 @@
-Start:  JUMP  Outer ; Jump into loop
-InnerCount: DATA  0 ; inner loop counter
-OuterCount: DATA  10  ; outer loop counter
 Outer:  ADD #-1,OuterCount  ; decrement outer loop counter
   ADD #10, InnerCount ; reset inner loop counter
   COMPARE #0,OuterCount ; if outer loop counter is 0, 
@@ -9,15 +6,5 @@ Outer:  ADD #-1,OuterCount  ; decrement outer loop counter
 Inner:  ADD #-1,InnerCount  ; decrement inner loop counter
   JUMPZ Outer,InnerCount  ; if inner loop counter is 0, jump back to outer loop
   JUMP  Inner   ; otherwise, continue with inner loop
-
-
-
-
-
-
-
-
-
-
-
-
+InnerCount: DATA  0 ; inner loop counter
+OuterCount: DATA  10  ; outer loop counter
